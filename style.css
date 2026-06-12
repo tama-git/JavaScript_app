@@ -1,0 +1,275 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 32px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    background: #eef3f8;
+    color: #1f2933;
+    font-family: "Segoe UI", "Yu Gothic", "Meiryo", sans-serif;
+}
+
+body > h1 {
+    margin: 0;
+    color: #102a43;
+    font-size: 34px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+select {
+    font: inherit;
+}
+
+.topMenu {
+    width: min(92vw, 560px);
+    display: grid;
+    gap: 24px;
+    text-align: center;
+}
+
+.topMenu h1 {
+    margin: 0;
+    color: #102a43;
+    font-size: 38px;
+    line-height: 1.2;
+}
+
+.quizMenu {
+    display: grid;
+    gap: 14px;
+}
+
+.menuLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 72px;
+    padding: 18px;
+    border: 1px solid #bcccdc;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #102a43;
+    font-size: 22px;
+    font-weight: 700;
+    box-shadow: 0 12px 28px rgba(31, 41, 51, 0.12);
+}
+
+.menuLink:hover {
+    border-color: #2563eb;
+    background: #eff6ff;
+    color: #1d4ed8;
+}
+
+.homeLink {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    padding: 0 16px;
+    border: 1px solid #bcccdc;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #243b53;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.homeLink:hover {
+    border-color: #2563eb;
+    background: #eff6ff;
+    color: #1d4ed8;
+}
+
+#app {
+    width: min(92vw, 560px);
+}
+
+.start,
+.question,
+.results {
+    width: 100%;
+    padding: 32px;
+    background: #ffffff;
+    border: 1px solid #d9e2ec;
+    border-radius: 8px;
+    box-shadow: 0 16px 36px rgba(31, 41, 51, 0.14);
+}
+
+.start {
+    display: grid;
+    gap: 18px;
+}
+
+.areaSelector {
+    width: 100%;
+    min-height: 48px;
+    padding: 10px 14px;
+    border: 1px solid #bcccdc;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #243b53;
+}
+
+button {
+    min-height: 48px;
+    padding: 0 18px;
+    border: 0;
+    border-radius: 6px;
+    background: #2563eb;
+    color: #ffffff;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+.question > p:first-child {
+    margin: 0 0 22px;
+    padding: 16px;
+    border-radius: 6px;
+    background: #f0f7ff;
+    color: #102a43;
+    font-size: 30px;
+    line-height: 1.4;
+    font-weight: 700;
+    text-align: center;
+}
+
+.question > div:first-of-type {
+    display: grid;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.question label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 50px;
+    padding: 12px 14px;
+    border: 1px solid #bcccdc;
+    border-radius: 6px;
+    background: #f8fbff;
+    cursor: pointer;
+}
+
+.question label:hover {
+    border-color: #2563eb;
+    background: #eff6ff;
+}
+
+.question .correctChoice {
+    border-color: #16a34a;
+    background: #ecfdf3;
+    color: #166534;
+    font-weight: 700;
+}
+
+.question .wrongChoice {
+    border-color: #dc2626;
+    background: #fef2f2;
+    color: #991b1b;
+    font-weight: 700;
+}
+
+.question input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    accent-color: #2563eb;
+}
+
+.question input[type="radio"]:disabled {
+    cursor: default;
+}
+
+.judgeMessage {
+    margin: 18px 0 0;
+    padding: 12px;
+    border-radius: 6px;
+    background: #f8fbff;
+    color: #486581;
+    font-weight: 700;
+    text-align: center;
+}
+
+.judgeMessage:empty {
+    display: none;
+}
+
+.correctMessage {
+    background: #ecfdf3;
+    color: #166534;
+}
+
+.wrongMessage {
+    background: #fef2f2;
+    color: #991b1b;
+}
+
+.actions {
+    margin-top: 8px;
+}
+
+.nextBtn,
+.startBtn,
+.resetBtn {
+    width: 100%;
+}
+
+.sec {
+    margin: 18px 0 0;
+    padding: 10px 12px;
+    border-radius: 6px;
+    background: #fff7ed;
+    color: #9a3412;
+    font-weight: 700;
+    text-align: center;
+}
+
+.results {
+    text-align: center;
+}
+
+.results p:first-child {
+    margin: 0 0 12px;
+    color: #102a43;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.resultMessage {
+    margin: 0 0 20px;
+    color: #2563eb;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.scoreText {
+    margin: 8px 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.resetBtn {
+    margin-top: 18px;
+}
